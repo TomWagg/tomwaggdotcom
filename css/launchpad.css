@@ -1,3 +1,9 @@
+:root {
+    --primary: #1995c6bd;
+    --primary-light: #6cc7eaa3;
+    --primary-dark: #186280;
+}
+
 body,
 html {
     width: 100%;
@@ -20,7 +26,7 @@ body {
 img.profile {
     max-width: 250px;
     border-radius: 100%;
-    border: 10px solid #1995c6bd;
+    border: 10px solid var(--primary);
     transition: 1.5s;
 }
 
@@ -79,4 +85,40 @@ header h1 {
         display: flex;
         flex-direction: column;
     }
+}
+
+footer.footer .social-link {
+    transition: 300ms ease-in-out;
+    box-shadow: 0px 6px 2px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+footer.footer .social-link.fa-github {
+    border-radius: 100%;
+}
+
+footer.footer .social-link.fa-linkedin {
+    border-radius: 10px;
+    line-height: 70px;
+}
+
+footer.footer .social-link:hover {
+    background-color: var(--primary-light);
+    text-decoration: none;
+    box-shadow: none;
+    transform: translateY(6px);
+}
+
+footer.footer .social-link:active {
+    background-color: var(--primary);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--primary-dark);
 }

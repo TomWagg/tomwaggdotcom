@@ -12,9 +12,16 @@ document.querySelectorAll(".project").forEach(function (el) {
     });
     setTimeout(function() {
         el.classList.add("visible")
-        animateCSS(el, "bounceIn");
+        animateCSS(el, "fadeIn");
     }, i * 100);
     i += 1;
+});
+
+// social link clickers
+document.querySelectorAll(".social-link").forEach(function(el) {
+    el.addEventListener("click", function() {
+        this.children[0].click();
+    });
 });
 
 /**
