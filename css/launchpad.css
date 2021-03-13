@@ -1,3 +1,4 @@
+/* General stuff for everywhere */
 :root {
     --primary: #1995c6bd;
     --primary-light: #6cc7eaa3;
@@ -23,6 +24,17 @@ body {
     content: '•';
 }
 
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* header styling */
 img.profile {
     max-width: 250px;
     border-radius: 100%;
@@ -39,6 +51,7 @@ header h1 {
     font-size: 50px;
 }
 
+/* grid of projects */
 .research-projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -46,8 +59,14 @@ header h1 {
     grid-auto-flow: dense;
     transition: 2s;
 }
+@media (max-width: 459px) {
+    .research-projects {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-
+/* project styling */
 .research-projects .project {
     transition: 1s;
     opacity: 0;
@@ -70,23 +89,7 @@ header h1 {
     width: 100%;
 }
 
-/* Extra-wide grid-posts */
-.research-projects .project.project-full-width {
-    grid-column: 1 / -1;
-}
-
-.research-projects .project.project-double {
-    grid-column: 1 / 2;
-}
-
-/* Single column display for phones */
-@media (max-width: 459px) {
-    .project {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
+/* footer styling */
 footer.footer .social-link {
     transition: 300ms ease-in-out;
     box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.25);
@@ -111,14 +114,4 @@ footer.footer .social-link:hover {
 
 footer.footer .social-link:active {
     background-color: var(--primary);
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: var(--primary-dark);
 }
