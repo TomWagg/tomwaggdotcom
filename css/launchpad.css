@@ -33,15 +33,50 @@ header h1 {
     font-size: 50px;
 }
 
-.research-projects .col {
-    margin-bottom: 10px;
-    transition: 0.7s ease-in-out;
+.research-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap: 32px;
+    grid-auto-flow: dense;
+    transition: 2s;
 }
 
-.research-projects .card .research-image {
+
+.research-projects .project {
+    transition: 1s;
+    opacity: 0;
+    border: 10px solid #54b0d4;
+    border-radius: 25px;
     padding: 10px;
+    cursor: pointer;
 }
 
-.research-projects .card .research-image img {
-    max-height: 250px;
+.research-projects .project .row {
+    height: 100%;
+    align-content: center;
+}
+
+.research-projects .project.visible {
+    opacity: 1;
+}
+
+.research-projects .project img {
+    width: 100%;
+}
+
+/* Extra-wide grid-posts */
+.research-projects .project.project-full-width {
+    grid-column: 1 / -1;
+}
+
+.research-projects .project.project-double {
+    grid-column: 1 / 2;
+}
+
+/* Single column display for phones */
+@media (max-width: 459px) {
+    .project {
+        display: flex;
+        flex-direction: column;
+    }
 }
