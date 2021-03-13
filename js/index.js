@@ -146,6 +146,7 @@ $(window).on(
 
 document.addEventListener('DOMContentLoaded', function () {
     var trigger = new ScrollTrigger({
-        addHeight: true
+        once: true,
+        // addHeight: true
     });
 });
