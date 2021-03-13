@@ -70,6 +70,10 @@ $(function () {
         }
     });
     $('#research_carousel').on('slid.bs.carousel', function (e) {
+        console.log(e.relatedTarget);
+        if (e.relatedTarget.querySelector(".container-fluid")) {
+            e.relatedTarget = e.relatedTarget.querySelector(".container-fluid");
+        }
         $('html, body').animate({
             scrollTop: $(e.relatedTarget).offset().top
         }, 1000, "easeInOutExpo");
