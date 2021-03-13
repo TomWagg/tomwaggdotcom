@@ -324,20 +324,18 @@ h6 {
 }
 
 footer.footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 footer.footer .social-link {
     display: block;
-    height: 4rem;
-    width: 4rem;
-    line-height: 4.3rem;
-    font-size: 1.5rem;
     color: white;
     background-color: var(--primary);
     transition: background-color 0.15s ease-in-out;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    cursor: pointer;
 }
 
 footer.footer .social-link:hover {

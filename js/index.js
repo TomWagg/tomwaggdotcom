@@ -92,6 +92,12 @@ $(function () {
         }
     });
 
+    document.querySelectorAll(".social-link").forEach(function(el) {
+        el.addEventListener("click", function() {
+            this.children[0].click();
+        });
+    });
+
 });
 
 /**
