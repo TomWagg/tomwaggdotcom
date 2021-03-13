@@ -1,0 +1,47 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.dotsep::before {
+    padding: 0px 10px;
+    content: '•';
+}
+
+img.profile {
+    max-width: 250px;
+    border-radius: 100%;
+    border: 10px solid #1995c6bd;
+    transition: 1.5s;
+}
+
+img.profile.flip {
+    transform: rotateX(360deg);
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.research-projects .col {
+    margin-bottom: 10px;
+    transition: 0.7s ease-in-out;
+}
+
+.research-projects .card .research-image {
+    padding: 10px;
+}
+
+.research-projects .card .research-image img {
+    max-height: 250px;
+}
