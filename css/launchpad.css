@@ -89,6 +89,38 @@ header h1 {
     width: 100%;
 }
 
+/* project overlays */
+.research-projects .project .col {
+    position: relative;
+}
+
+.research-projects .project .project-description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 25px;
+    opacity: 0;
+    transition: 300ms;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-clip: content-box;
+    padding: inherit;
+}
+
+.research-projects .project:hover .project-description {
+    opacity: 1;
+}
+
+.research-projects .project .project-description-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: inherit;
+    width: 100%;
+}
+
 /* footer styling */
 footer.footer .social-link {
     transition: 300ms ease-in-out;
